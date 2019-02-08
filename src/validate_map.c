@@ -6,7 +6,7 @@
 /*   By: tbujalo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 13:22:56 by tbujalo           #+#    #+#             */
-/*   Updated: 2019/02/05 13:23:25 by tbujalo          ###   ########.fr       */
+/*   Updated: 2019/02/08 16:27:29 by tbujalo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			validate_map(char *line)
 	i = 0;
 	while (line[i])
 	{
-		if ((line[i] < '0' || line[i] > '9') && line[i] != ' ')
+		if (line[i] < '0' && line[i] > '9' && line[i] != ' ')
 			if (!check_char(line[i]))
 				return (0);
 		i++;
