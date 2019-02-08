@@ -1,0 +1,24 @@
+MUST HAVE TOOLS:
+
+git
+libx11-dev
+libxext-dev
+build-essential
+clang (опціонально)
+
+to update packages you can use below command
+sudo apt install git libx11-dev libxext-dev build-essential clang
+
+INSLAT
+git clone https://github.com/fotonmoton/libmlx.git73 minilibx
+make!
+
+After that, you could compile a library in the director of minilibx but 2 static libraries- libmlx.a та libmlx_Linux.a.
+
+HOW USE:
+
+1) include
+#include "mlx.h"
+
+2) Compiling with flags:
+clang main.c -Werror -Wextra -Wall -lmlx -lXext -lX11 -L LIBMLX_PATH/ -I LIBMLX_PATH/
